@@ -1,0 +1,34 @@
+.foodSection {
+  display: flex;
+  justify-content: center;
+  background: white;
+  padding-bottom: 3rem;
+}
+
+.foodContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+}
+
+.sectionTitle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 90px;
+
+  h1 {
+    color: var(--black);
+    text-wrap: nowrap;
+  }
+}
+
+.cardContainer {
+  width: 100%;
+  margin-top: 2.6rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.4rem;
+}

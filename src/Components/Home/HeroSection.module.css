@@ -1,0 +1,74 @@
+.heroContainer {
+  display: flex;
+  background: var(--primary-color);
+  justify-content: center;
+}
+
+.heroSection {
+  position: relative;
+  display: flex;
+  background: var(--primary-color);
+  width: 900px;
+}
+
+.displayContainer {
+  position: relative;
+  padding: 3rem 1rem 1.25rem;
+
+  h1 {
+    color: var(--secondary-color);
+    line-height: 100%;
+  }
+
+  h2 {
+    line-height: 100%;
+    margin-bottom: 2rem;
+    color: var(--white);
+  }
+
+  p {
+    margin-bottom: 1rem;
+    width: 40%;
+    color: var(--white);
+  }
+
+  @media screen and (max-width: 30em) {
+    padding: 1rem;
+  }
+}
+
+.homeImg {
+  width: 375px;
+  height: 375px;
+  border-radius: 20px;
+  object-fit: cover;
+
+  position: absolute;
+  right: -4rem;
+  top: 3rem;
+
+  @media screen and (max-width: 30em) {
+    width: 150px;
+    height: 150px;
+    top: 40%;
+    right: 1rem;
+  }
+}
+
+.notHomeImg {
+  width: 375px;
+  height: 200px;
+  border-radius: 20px;
+  object-fit: cover;
+
+  position: absolute;
+  right: -4rem;
+  top: 3rem;
+
+  @media screen and (max-width: 30em) {
+    width: 150px;
+    height: 150px;
+    top: 40%;
+    right: 1rem;
+  }
+}

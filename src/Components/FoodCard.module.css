@@ -1,0 +1,28 @@
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 264.667px;
+
+  background: var(--white);
+
+  h3,
+  a {
+    color: var(--black);
+  }
+
+  span {
+    color: var(--tertiary-color);
+  }
+
+  p {
+    margin-top: 1.4rem;
+    color: var(--primary-color);
+  }
+
+  .foodImg {
+    max-width: 264.667px;
+    max-height: 185.258px;
+    border-radius: 16px 16px 0 0;
+    border: 1px solid black;
+  }
+}
