@@ -25,7 +25,7 @@ function reducer(state, action) {
   }
 }
 
-function BookingPage() {
+function BookingPage({ onBookingData = () => null, bookingData = [] }) {
   const [{ availableTimes, isLoading }, dispatch] = useReducer(
     reducer,
     initializeTimes()
@@ -59,6 +59,7 @@ function BookingPage() {
         availableTimes={availableTimes}
         isLoading={isLoading}
         updateTimes={updateTimes}
+        onBookingData={onBookingData}
       />
       <Footer />
     </>

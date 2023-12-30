@@ -13,9 +13,15 @@ import '@mantine/core/styles.css';
 import '@mantine/dates/styles.css';
 import classes from './BookingForm.module.css';
 import { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
-function BookingForm({ availableTimes = [], updateTimes = () => null }) {
+function BookingForm({
+  availableTimes = [],
+  updateTimes = () => null,
+  onBookingData = () => null,
+}) {
   const [isInitialRender, setIsInitialRender] = useState(true);
+  const navigate = useNavigate();
 
   const form = useForm({
     initialValues: {
@@ -49,6 +55,11 @@ function BookingForm({ availableTimes = [], updateTimes = () => null }) {
     updateTimes(form.values.date);
   }, [form.values.date]);
 
+  function handleSubmitData(data) {
+    onBookingData(data);
+    navigate('/confirmation');
+  }
+
   return (
     <section className={classes.section}>
       <div className={classes.container}>
@@ -56,7 +67,7 @@ function BookingForm({ availableTimes = [], updateTimes = () => null }) {
 
         <form
           className={classes.inputContainer}
-          onSubmit={form.onSubmit((val) => console.log(val))}
+          onSubmit={form.onSubmit((val) => handleSubmitData(val))}
           role='form'
           aria-labelledby='Reserve Form'
           aria-describedby='Form for reserve your table'
